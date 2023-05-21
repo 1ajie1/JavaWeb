@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tuleaj.dao.CourseMapper">
+    <select id="selectCourse"  resultType="com.tuleaj.domain.Course">
+        select * from mybatis.demo3
+    </select>
+
+    <select id="selectCourseById" parameterType="int" resultType="com.tuleaj.domain.Course">
+        select * from mybatis.demo3 where id=#{id}
+    </select>
+    <delete id="deleteCourse" parameterType="int">
+        delete from demo3 where id=#{id}
+    </delete>
+
+    <update id="updateCourse" parameterType="com.tuleaj.domain.Course">
+        update demo3 set name=#{name},hours=#{hours},college=#{college},picture=#{picture} where id=#{id}
+    </update>
+    <insert id="insertCourse" parameterType="com.tuleaj.domain.Course">
+        insert into demo3 (name, hours, college,picture) values(#{name},#{hours},#{college},#{picture})
+    </insert>
+    <update id="auto">
+        alter table demo3 auto_increment=1;
+    </update>
+</mapper>

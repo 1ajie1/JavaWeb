@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdemo2_client=self.webpackChunkdemo2_client||[]).push([[397],{8397:function(e,t,s){e.exports=s.p+"static/media/axios_demo.bebe9bee72b2b04ee270.txt"}}]);
