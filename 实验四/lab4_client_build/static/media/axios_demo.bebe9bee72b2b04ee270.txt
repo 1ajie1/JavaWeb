@@ -1,0 +1,45 @@
+// import axios from "axios";
+// import React from "react";
+// import { Navigate } from "react-router-dom";
+
+// // 添加请求拦截器
+// axios.interceptors.request.use(
+//   function (config) {
+//     // 在发送请求之前做些什么
+//     // 判断是否存在token,如果存在将每个页面header添加token
+//     alert("请求拦截器成功");
+//     if (localStorage.getItem("token")) {
+//       config.headers.common["token"] = localStorage.getItem("token");
+//       alert("存在token加入请求头，请求头为" + JSON.stringify(config.headers));
+//     }
+//     return config;
+//   },
+//   function (error) {
+//     //当前端有错误的时候，几乎不存在
+//     <Navigate to={"/login"}></Navigate>;
+//     return Promise.reject(error);
+//   }
+// );
+
+// // 添加请求拦截器
+// axios.interceptors.request.use(
+//   function (config) {
+//     // 在发送请求之前做些什么
+//     // 判断是否存在token,如果存在将每个页面header添加token
+//     alert("请求拦截器成功");
+//     console.log(localStorage.getItem("token"))
+//     if (localStorage.getItem("token")) {
+//       config.headers["token"] = localStorage.getItem("token");
+//       alert("存在token加入请求头，请求头为" + JSON.stringify(config.headers));
+//     }
+//     console.log(config)
+//     return config;
+//   },
+//   function (error) {
+//     //当前端有错误的时候，几乎不存在
+//     <Navigate to={"/login"}></Navigate>;
+//     return Promise.reject(error);
+//   }
+// );
+
+// // export default axios;
